@@ -34,7 +34,7 @@
 
         h1 {
             font-size: 32px;
-            margin-bottom: 4px;
+            margin-bottom: 0px;
             color: #000;
         }
 
@@ -49,6 +49,11 @@
             font-size: 16px;
             margin-bottom: 20px;
             color: #444;
+        }
+
+        .title {
+            margin-top: 0;
+            line-height: 1;
         }
 
         em {
@@ -83,13 +88,51 @@
             }
         }
 
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .avatar {
+                width: 44px;
+                height: 44px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>nilesh rathore</h1>
-        <p><em>builder · entrepreneur</em></p>
+        <div class="header">
+            <div class="header-content">
+                <h1>nilesh rathore</h1>
+                <p class="title"><em>builder · entrepreneur</em></p>
+            </div>
+            <img src="avatar.jpg" alt="Nilesh Rathore" class="avatar">
+        </div>
 
         <p>i grew up in a remote village in india, mostly without computers and internet, and started doing side hustles
             at 14.</p>
